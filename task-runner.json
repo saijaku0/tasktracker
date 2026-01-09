@@ -1,0 +1,27 @@
+{
+  "tasks": [
+    {
+      "name": "commit-message-lint",
+      "command": "bash",
+      "args": [
+        "-c",
+        "grep -qE \"^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\\(.+\\))?: .+\" \"$1\""
+      ],
+      "windows": {
+        "command": "powershell",
+        "args": [
+          "-Command",
+          "$msg = Get-Content $args[0]; if ($msg -notmatch '^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\\(.+\\))?: .+') { exit 1 }"
+        ]
+      }
+    },
+    {
+      "name": "branch-name-lint",
+      "command": "bash",
+      "args": [
+        "-c",
+        "current_branch=$(git rev-parse --abbrev-ref HEAD); if [[ ! $current_branch =~ ^(main|develop|master)$ && ! $current_branch =~ ^(feature|bugfix|hotfix|release)/.+ ]]; then echo 'Invalid branch name! Use feature/name, fix/name etc.'; exit 1; fi"
+      ]
+    }
+  ]
+}
