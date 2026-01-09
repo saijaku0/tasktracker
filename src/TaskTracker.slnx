@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="TaskTracker.API/TaskTracker.API.csproj" Id="719cb031-5ee1-47fd-9257-c1f71ea83f54" />
+  <Project Path="TaskTracker.Application/TaskTracker.Application.csproj" Id="ec8a86cd-f4f7-47a4-aa82-b2302e0100e5" />
+  <Project Path="TaskTracker.Domain/TaskTracker.Domain.csproj" Id="d88fe48b-55fb-4033-8197-faf2d357017e" />
+  <Project Path="TaskTracker.Infrastructure/TaskTracker.Infrastructure.csproj" Id="e1074e39-dde5-4c8b-a284-09c06a113247" />
+</Solution>
