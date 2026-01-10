@@ -1,7 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using TaskTracker.Infrastructure.Persistence;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskTracker.Infrastructure
 {
