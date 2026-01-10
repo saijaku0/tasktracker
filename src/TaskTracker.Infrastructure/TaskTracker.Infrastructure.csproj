@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+	  <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore" />
-	  <PackageReference Include="Npgsql" />
   </ItemGroup>
 
 </Project>
