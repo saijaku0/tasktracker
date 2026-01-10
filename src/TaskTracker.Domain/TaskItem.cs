@@ -10,6 +10,8 @@
 
     public class TaskItem
     {
+        private readonly List<object> _domainEvents = [];
+
         public Guid Id { get; init; }
         public string Title { get; private set; } = string.Empty;
         public string Description { get; private set; } = string.Empty;
@@ -40,6 +42,8 @@
             UpdateAt = now;
         }
 
+        public IReadOnlyCollection<object> DomainEvents => _domainEvents.AsReadOnly();
+
         public void Complete()
         {
             CheckAssignedUser();
@@ -49,6 +53,10 @@
 
             Status = TaskStatus.Done;
             UpdateAt = DateTime.UtcNow;
+
+            var @event = new TaskCompletedDomainEvent(
+                Id, AssignedUserId: AssignedUserId.Value, CompletedAt: UpdateAt);
+            _domainEvents.Add(@event);
         }
 
         public void StartTaskProgress()
@@ -105,6 +113,11 @@
             {
                 Status = TaskStatus.Todo;
             }
+        }
+
+        public void ClearDomainEvents()
+        {
+            _domainEvents.Clear();
         }
 
         private void CheckAssignedUser()
