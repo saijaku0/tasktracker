@@ -11,4 +11,10 @@
     <ProjectReference Include="..\TaskTracker.Domain\TaskTracker.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+	  <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" />
+	  
+  </ItemGroup>
+
 </Project>
