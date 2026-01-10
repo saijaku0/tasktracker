@@ -14,6 +14,7 @@
         public string Description { get; private set; } = string.Empty;
         public TaskStatus Status { get; private set; }
         public Guid? AssignedUserId { get; private set; }
+        public User? AssignedUser { get; private set; }
 
         private TaskItem() { }
 
@@ -21,7 +22,8 @@
             string title,
             string description,
             TaskStatus status,
-            Guid? assignedUserId)
+            Guid? assignedUserId,
+            User? assignedUser)
         {
             if (string.IsNullOrEmpty(title))
                 throw new DomainException(nameof(title));
@@ -31,6 +33,7 @@
             Description = description;
             Status = status;
             AssignedUserId = assignedUserId;
+            AssignedUser = assignedUser;
         }
 
         public void Complete()
