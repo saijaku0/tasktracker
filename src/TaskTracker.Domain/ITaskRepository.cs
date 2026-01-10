@@ -8,7 +8,6 @@
 
         Task UpdateAsync(TaskItem task, CancellationToken cancellationToken = default);
 
-        // (опционально) найти задачи пользователя
         Task<IReadOnlyList<TaskItem>> GetByUserIdAsync(Guid userId, CancellationToken cancellationToken = default);
 
     }

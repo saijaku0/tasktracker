@@ -10,9 +10,9 @@
         private User() { }
 
         public User(
-            Guid id, 
-            string firstName, 
-            string lastname, 
+            Guid id,
+            string firstName,
+            string lastname,
             string email)
         {
             if (string.IsNullOrWhiteSpace(firstName))
