@@ -6,11 +6,14 @@
         public string FirstName { get; private set; } = string.Empty;
         public string Lastname { get; private set; } = string.Empty;
         public string Email { get; private set; } = string.Empty;
-        public ICollection<TaskItem> AssignedTasks { get; private set; } = new List<TaskItem>();
 
         private User() { }
 
-        public User(Guid id, string firstName, string lastname, string email, ICollection<TaskItem> tasks)
+        public User(
+            Guid id,
+            string firstName,
+            string lastname,
+            string email)
         {
             if (string.IsNullOrWhiteSpace(firstName))
                 throw new DomainException("First name is required.");
@@ -23,7 +26,6 @@
             FirstName = firstName;
             Lastname = lastname;
             Email = email;
-            AssignedTasks = tasks;
         }
     }
 }
