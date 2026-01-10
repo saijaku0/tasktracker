@@ -16,7 +16,7 @@
                 throw new DomainException("First name is required.");
             if (string.IsNullOrWhiteSpace(lastname))
                 throw new DomainException("Last name is required.");
-            if (string.IsNullOrWhiteSpace(email)) 
+            if (string.IsNullOrWhiteSpace(email))
                 throw new DomainException("Email is required.");
 
             Id = id;
