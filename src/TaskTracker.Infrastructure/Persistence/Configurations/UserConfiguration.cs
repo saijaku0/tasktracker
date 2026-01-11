@@ -16,6 +16,8 @@ namespace TaskTracker.Infrastructure.Persistence.Configurations
             builder.Property(p => p.Lastname)
                 .IsRequired()
                 .HasMaxLength(100);
+            builder.HasIndex(p => p.Email)
+                .IsUnique();
             builder.Property(p => p.Email)
                 .IsRequired()
                 .HasMaxLength(200);
