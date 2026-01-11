@@ -1,4 +1,6 @@
-﻿namespace TaskTracker.Domain
+﻿using TaskTracker.Domain.Exceptions;
+
+namespace TaskTracker.Domain.TasksItem
 {
     public enum TaskStatus
     {
