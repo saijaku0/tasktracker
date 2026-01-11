@@ -1,4 +1,6 @@
-﻿namespace TaskTracker.Domain.Interface.Repository
+﻿using TaskTracker.Domain.TasksItem;
+
+namespace TaskTracker.Domain.Interface.Repository
 {
     public interface ITaskRepository
     {
