@@ -6,6 +6,10 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
+});
 
 var app = builder.Build();
 
