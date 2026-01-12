@@ -14,6 +14,6 @@ namespace TaskTracker.Domain.Interface.Repository
 
         Task DeleteUser(Guid userId, CancellationToken cancellationToken);
 
-        Task SaveUser(User user, CancellationToken cancellationToken);
+        Task SaveUser(CancellationToken cancellationToken);
     }
 }
