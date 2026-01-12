@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TaskTracker.Domain;
+using TaskTracker.Domain.TasksItem;
 
 namespace TaskTracker.Infrastructure.Persistence.Configurations
 {

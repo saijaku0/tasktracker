@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Reflection;
-using TaskTracker.Domain;
+using TaskTracker.Domain.TasksItem;
+using TaskTracker.Domain.UserDomain;
 
 namespace TaskTracker.Infrastructure.Persistence
 {
