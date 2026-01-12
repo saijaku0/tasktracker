@@ -1,4 +1,4 @@
-﻿namespace TaskTracker.Application.Users.Commands.Interfaces.Authentication
+﻿namespace TaskTracker.Application.Common.Interfaces.Authentication
 {
     public interface IPasswordHasher
     {
